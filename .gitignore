@@ -1,0 +1,31 @@
+# Build artifacts
+build/
+build_pdfs.zip
+*.aux
+*.log
+*.out
+*.toc
+extract_hierarchy.typ
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Editor
+.vscode/
+.idea/
+*.sublime-*
+
+# Temporary files
+*.tmp
+.temp/
+
+# Keep output.pdf (not ignored)
