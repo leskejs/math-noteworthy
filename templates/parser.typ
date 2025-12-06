@@ -1,5 +1,4 @@
-#import "../config.typ": * //edit this file to configure
-#import "./templater.typ": *
+#import "templater.typ": * //edit templates/config/config.json to configure
 
 #let target = sys.inputs.at("target", default: none)
 #let page-offset = sys.inputs.at("page-offset", default: none)
@@ -11,7 +10,7 @@
 }
 
 #if target == none or target == "cover" {
-  if display-cover {
+  if display-cover or target == "cover" {
     cover(
       title: title,
       subtitle: subtitle,
@@ -26,36 +25,45 @@
 }
 
 #if target == none or target == "outline" {
-  if display-outline {
+  if display-outline or target == "outline" {
     outline()
   }
 }
 
-#for chapter in hierarchy {
-  let first-page = chapter.pages.at(0)
-  let chapter-id = first-page.id.slice(0, 2)
-  
-  if target == none or target == "chapter-" + chapter-id {
-    if display-chap-cover {
+#for (i, chapter) in hierarchy.enumerate() {
+  let chapter-idx = str(i)
+  let ch-num = str(chapter.at("number", default: i + 1))
+  let total-chapters = hierarchy.len()
+  let chapter-display-id = format-chapter-id(ch-num, total-chapters)
+  let total-pages = chapter.pages.len()
+
+  if target == none or target == "chapter-" + chapter-idx {
+    if display-chap-cover or target != none {
       chapter-cover(
-        number: "Chapter " + chapter-id,
+        number: chapter-name + " " + chapter-display-id,
         title: chapter.title,
         summary: chapter.summary,
       )
     }
   }
-  
-  for page in chapter.pages {
-    if target == none or target == page.id {
+
+  for (j, page) in chapter.pages.enumerate() {
+    let page-idx = str(j)
+    let pg-num = str(page.at("number", default: j + 1))
+    let page-target = chapter-idx + "/" + page-idx
+    let page-display-id = format-page-id(ch-num + "." + pg-num, total-pages, total-chapters)
+
+    if target == none or target == page-target {
       // Inject chapter metadata if missing (for single page compilation)
-      if target != none and target != "chapter-" + chapter-id {
-        [#metadata(("Chapter " + chapter-id, chapter.title)) <chapter-cover>]
+      if target != none and target != "chapter-" + chapter-idx {
+        [#metadata((chapter-name + " " + chapter-display-id, chapter.title)) #label("chapter-" + str(i + 1))]
       }
       show: project.with(
-        number: subchap-name + " " + page.id,
+        number: chapter-name + " " + page-display-id,
         title: page.title,
       )
-      include "../content/" + lower(chapter-name) + " " + chapter-id + "/" + page.id + ".typ"
+      include "../content/" + chapter-idx + "/" + page-idx + ".typ"
     }
   }
 }
+

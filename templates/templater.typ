@@ -1,4 +1,4 @@
-#import "../config.typ": *
+#import "setup.typ": *
 #import "./default-schemes.typ": *
 
 #import "./layouts/blocks.typ"
@@ -36,7 +36,7 @@
 #let active-theme = active-theme
 #let project = project.with(theme: active-theme)
 #let cover = cover.with(theme: active-theme)
-#let preface = preface.with(theme: active-theme, content: preface-content, authors: authors)
+#let preface = preface.with(theme: active-theme, content: include "config/preface.typ", authors: authors)
 #let outline = outline.with(theme: active-theme)
 #let chapter-cover = chapter-cover.with(theme: active-theme)
 #let definition = blocks.create-block.with(active-theme.blocks.definition)

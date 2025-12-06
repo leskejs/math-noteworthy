@@ -1,4 +1,4 @@
-#import "../../config.typ": *
+#import "../setup.typ": *
 #let project(theme: (:), number: "", title: "", author: "", affiliation: "", date: none, body) = {
   counter(heading).update(0)
 
@@ -21,9 +21,12 @@
   // Optional stylin
   set text(font: font, size: 11pt, fill: theme.text-main)
   context {
-    let chapter = query(selector(<chapter-cover>).before(here())).last()
+    let chapters = query(selector(metadata).before(here())).filter(el => {
+      el.label != none and str(el.label).starts-with("chapter-")
+    })
+    let chapter = if chapters.len() > 0 { chapters.last() } else { none }
 
-    [#metadata((number, title, chapter)) <subchapter-cover>#label(page-id)]
+    [#metadata((number, title, chapter)) #label(page-id)]
 
     let display_date = if date == none {
       datetime.today().display("[Month]/[day], [year]")
@@ -65,3 +68,4 @@
 
   body
 }
+

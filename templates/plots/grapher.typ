@@ -1,6 +1,6 @@
 #import "@preview/cetz:0.4.2"
 #import "@preview/cetz-plot:0.1.3": plot
-#import "../../config.typ": render-implicit-samples, render-sample-count
+#import "../setup.typ": render-implicit-count, render-sample-count
 
 /// Plots a mathematical function in various coordinate systems.
 /// Supports standard functions, parametric equations, polar curves, and implicit equations.
@@ -26,7 +26,7 @@
   type: "y=x",
   domain: auto,
   y-domain: (-5, 5),
-  samples: auto,
+  samples: render-sample-count,
   label: none,
   style: (:),
 ) = {
@@ -39,17 +39,8 @@
   let base-color = if "stroke" in style { style.stroke } else { highlight-col }
   let final-style = (stroke: base-color) + style
 
-  // Determine effective sample count
-  let effective-samples = if samples != auto {
-    samples
-  } else if type == "implicit" {
-    render-implicit-samples
-  } else {
-    render-sample-count
-  }
-
   let common-args = (
-    samples: effective-samples,
+    samples: samples,
     style: final-style,
   )
 
@@ -86,6 +77,9 @@
   } else if type == "implicit" {
     // Implicit Equation: f(x, y) = 0
     let x-dom = if domain == auto { (-5, 5) } else { domain }
+
+    // Use implicit count if samples is still default
+    let effective-samples = if samples == render-sample-count { render-implicit-count } else { samples }
 
     plot.add-contour(
       x-domain: x-dom,
