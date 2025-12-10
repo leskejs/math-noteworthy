@@ -1,4 +1,3 @@
-
 #import "../setup.typ": active-theme
 
 Welcome to *Mathematics II*, a comprehensive exploration of advanced mathematical concepts that will expand your understanding of how mathematics describes and analyzes the world around us.

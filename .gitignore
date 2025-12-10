@@ -29,3 +29,13 @@ Thumbs.db
 .temp/
 
 # Keep output.pdf (not ignored)
+
+# System Config
+templates/systemconfig/
+
+# Deprecated
+load-noteworthy.py
+
+# Generated Snippets
+templates/config/*.pdf
+

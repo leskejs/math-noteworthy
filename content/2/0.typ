@@ -36,13 +36,13 @@
   // ------------------------------------------------
   #rect-plot(x-domain: (-5, 5), y-domain: (-3, 6), {
     // Parabola: x^2 = 8y -> y = x^2 / 8
-    add-graph(
+    plot-function(
       x => x * x / 8,
       domain: (-6, 6),
     )
 
     // Directrix: y = -2
-    add-graph(
+    plot-function(
       x => -2,
       domain: (-6, 6),
       style: (stroke: (dash: "dashed")),
@@ -71,13 +71,13 @@
       y-domain: (-2.5, 1), // Shifted view down
       {
         // Parabola: y = -x^2
-        add-graph(
+        plot-function(
           x => -x * x,
           domain: (-2, 2),
         )
 
         // Directrix: y = 1/4 (since p = -1/4)
-        add-graph(
+        plot-function(
           x => 0.25,
           domain: (-2, 2),
           style: (stroke: (dash: "dashed")),

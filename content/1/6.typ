@@ -95,13 +95,13 @@
       y-tick: 5,
       {
         // 3x + 2y <= 60 -> y <= 30 - 1.5x
-        add-graph(
+        plot-function(
           x => 30 - 1.5 * x,
           domain: (0, 20),
           style: (stroke: blue),
         )
         // x + 2y <= 40 -> y <= 20 - 0.5x
-        add-graph(
+        plot-function(
           x => 20 - 0.5 * x,
           domain: (0, 40),
           style: (stroke: red),
@@ -215,13 +215,13 @@
       y-tick: 5,
       {
         // x + y >= 20 -> y >= 20 - x
-        add-graph(
+        plot-function(
           x => 20 - x,
           domain: (0, 20),
           style: (stroke: blue),
         )
         // 2x + y >= 30 -> y >= 30 - 2x
-        add-graph(
+        plot-function(
           x => 30 - 2 * x,
           domain: (0, 15),
           style: (stroke: red),

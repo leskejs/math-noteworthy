@@ -22,7 +22,7 @@
   1. $u dot v = v dot u$
   2. $(c u) dot v = c(u dot v) = u dot (c v)$
   3. $(u + v) dot w = u dot w + v dot w$
-  4. $|u|^2 = u dot u$
+  4. $norm(u)^2 = u dot u$
 ]
 
 #example("Exercise")[
@@ -52,31 +52,31 @@
 ]
 
 #example("Identity")[
-  Show that $||a plus.minus b||^2 = ||a||^2 + ||b||^2 plus.minus 2a dot b$.
+  Show that $norm(a plus.minus b)^2 = norm(a)^2 + norm(b)^2 plus.minus 2a dot b$.
 
   #solution("")[
-    Using the property $|u|^2 = u dot u$ and the distributive laws:
+    Using the property $norm(u)^2 = u dot u$ and the distributive laws:
     $
-      ||a plus.minus b||^2 & = (a plus.minus b) dot (a plus.minus b) \
-                           & = a dot a plus.minus a dot b plus.minus b dot a + b dot b \
-                           & = ||a||^2 plus.minus 2(a dot b) + ||b||^2 \
-                           & = ||a||^2 + ||b||^2 plus.minus 2a dot b.
+      norm(a plus.minus b)^2 & = (a plus.minus b) dot (a plus.minus b) \
+                             & = a dot a plus.minus a dot b plus.minus b dot a + b dot b \
+                             & = norm(a)^2 plus.minus 2(a dot b) + norm(b)^2 \
+                             & = norm(a)^2 + norm(b)^2 plus.minus 2a dot b.
     $
   ]
 ]
 
 #theorem("The Dot Product Theorem")[
   If $theta$ is the angle between two nonzero vectors $u$ and $v$, then
-  $ u dot v = |u||v| cos theta. $
+  $ u dot v = norm(u) norm(v) cos theta. $
 ]
 
 #example("Calculation")[
-  Let $||b|| = 1$ and $||a - 3b|| = sqrt(13)$. If the angle between $a$ and $b$ is $60^degree$, find $||a||$.
+  Let $norm(b) = 1$ and $norm(a - 3b) = sqrt(13)$. If the angle between $a$ and $b$ is $60^degree$, find $norm(a)$.
 
   #solution("")[
-    $||a - 3b||^2 = 13 arrow.r.double ||a||^2 - 6a dot b + 9||b||^2 = 13$
-    $||a||^2 - 6||a|| cos 60^degree + 9 = 13$
-    $||a||^2 - 3||a|| - 4 = 0 arrow.r.double ||a|| = 4$.
+    $norm(a - 3b)^2 = 13 arrow.r.double norm(a)^2 - 6a dot b + 9norm(b)^2 = 13$
+    $norm(a)^2 - 6norm(a) cos 60^degree + 9 = 13$
+    $norm(a)^2 - 3norm(a) - 4 = 0 arrow.r.double norm(a) = 4$.
   ]
 ]
 
@@ -90,16 +90,16 @@
   (b) $u = #sym.chevron.l 3, 1 #sym.chevron.r, v = #sym.chevron.l 1, -1 #sym.chevron.r$
 
   #solution("")[
-    The cosine of the angle is given by $cos theta = (u dot v) / (|u||v|)$.
+    The cosine of the angle is given by $cos theta = (u dot v) / (norm(u) norm(v))$.
 
     (a)
     $ u dot v = 1(1) + 1(-2) = -1 $
-    $ |u| = sqrt(1^2 + 1^2) = sqrt(2), quad |v| = sqrt(1^2 + (-2)^2) = sqrt(5) $
+    $ norm(u) = sqrt(1^2 + 1^2) = sqrt(2), quad norm(v) = sqrt(1^2 + (-2)^2) = sqrt(5) $
     $ cos theta = (-1) / (sqrt(2) sqrt(5)) = -1/sqrt(10). $
 
     (b)
     $ u dot v = 3(1) + 1(-1) = 2 $
-    $ |u| = sqrt(3^2 + 1^2) = sqrt(10), quad |v| = sqrt(1^2 + (-1)^2) = sqrt(2) $
+    $ norm(u) = sqrt(3^2 + 1^2) = sqrt(10), quad norm(v) = sqrt(1^2 + (-1)^2) = sqrt(2) $
     $ cos theta = 2 / (sqrt(10) sqrt(2)) = 2 / sqrt(20) = 2 / (2sqrt(5)) = 1/sqrt(5). $
   ]
 ]
@@ -113,7 +113,7 @@
 
 = The Component of u along v
 
-$ op("comp")_v u = |u| cos theta = (u dot v) / |v| $
+$ op("comp")_v u = norm(u) cos theta = (u dot v) / (norm(v)) $
 $ op("proj")_v u = ((u dot v) / (v dot v)) v $
 
 #example("Projection")[
@@ -145,8 +145,8 @@ $ op("proj")_v u = ((u dot v) / (v dot v)) v $
   A child pulls a wagon with force 100 N at $60^degree$ for 100 m. Find the work done.
 
   #solution("")[
-    The work done $W$ by a constant force $F$ moving an object through a displacement $D$ is given by $W = F dot D = |F||D| cos theta$.
-    Given: $|F| = 100$ N, $|D| = 100$ m, $theta = 60^degree$.
+    The work done $W$ by a constant force $F$ moving an object through a displacement $D$ is given by $W = F dot D = norm(F) norm(D) cos theta$.
+    Given: $norm(F) = 100$ N, $norm(D) = 100$ m, $theta = 60^degree$.
 
     $ W = 100 dot 100 dot cos(60^degree) = 10000 dot 1/2 = 5000 "J (Joules)". $
   ]

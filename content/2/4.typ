@@ -116,8 +116,8 @@ $ A x sr + underbrace(B x y, "this rotates\nthe graph") + C y sr + D x +E y +F =
     x-domain: (-5, 5),
     y-domain: (-5, 5),
     {
-      add-graph(x => 2 / x, domain: (-6, -0.1))
-      add-graph(x => 2 / x, domain: (6, 0.1))
+      plot-function(x => 2 / x, domain: (-6, -0.1))
+      plot-function(x => 2 / x, domain: (6, 0.1))
     },
     draw-content: {
       draw.line(

@@ -2,7 +2,7 @@
     {
         "title": "Polar Coordinates, Parametric Equations & Vectors",
         "number": "8",
-        "summary": "Until now, our study of functions has been confined to the static grid of the Rectangular coordinate system. However, the dynamic physical universe—filled with spiraling galaxies and directional forces—rarely conforms to such rigid constraints. In this chapter, we expand our mathematical lexicon to include Polar Coordinates, Parametric Equations, and Vectors, freeing us from the limitations of Cartesian graphs. By redefining position through distance and angle and introducing time as a driving parameter, we gain the sophisticated framework necessary to analyze motion, force, and form in a complex, multi-dimensional world.",
+        "summary": "Until now, our study of functions has been confined to the static grid of the Rectangular coordinate system. However, the dynamic physical universe\u2014filled with spiraling galaxies and directional forces\u2014rarely conforms to such rigid constraints. In this chapter, we expand our mathematical lexicon to include Polar Coordinates, Parametric Equations, and Vectors, freeing us from the limitations of Cartesian graphs. By redefining position through distance and angle and introducing time as a driving parameter, we gain the sophisticated framework necessary to analyze motion, force, and form in a complex, multi-dimensional world.",
         "pages": [
             {
                 "id": "0",
@@ -36,7 +36,7 @@
             },
             {
                 "id": "6",
-                "title": "Equations of Lines Planes",
+                "title": "Equations of Lines & Planes",
                 "number": "7"
             }
         ]
@@ -44,7 +44,7 @@
     {
         "title": "Matrices",
         "number": "9",
-        "summary": "While elementary algebra focuses on individual numbers representing single quantities, modern mathematics often requires us to manage and manipulate vast structures of data simultaneously. This brings us to the study of Matrices—rectangular arrays of numbers that serve as one of the most powerful tools in the mathematical arsenal. In this chapter, we will evolve our understanding of linear systems, moving from simple substitution to the elegant efficiency of Gaussian elimination and matrix operations. Beyond merely solving equations, we will discover that matrices act as functional operators capable of transforming space—rotating, scaling, and shearing geometric figures. Whether it is rendering 3D computer graphics, modeling economic input-output systems, or encrypting digital communications, the logic of matrix algebra provides the fundamental framework for organizing and processing information in the digital age.",
+        "summary": "While elementary algebra focuses on individual numbers representing single quantities, modern mathematics often requires us to manage and manipulate vast structures of data simultaneously. This brings us to the study of Matrices\u2014rectangular arrays of numbers that serve as one of the most powerful tools in the mathematical arsenal. In this chapter, we will evolve our understanding of linear systems, moving from simple substitution to the elegant efficiency of Gaussian elimination and matrix operations. Beyond merely solving equations, we will discover that matrices act as functional operators capable of transforming space\u2014rotating, scaling, and shearing geometric figures. Whether it is rendering 3D computer graphics, modeling economic input-output systems, or encrypting digital communications, the logic of matrix algebra provides the fundamental framework for organizing and processing information in the digital age.",
         "pages": [
             {
                 "id": "0",
@@ -86,7 +86,7 @@
     {
         "title": "Conics",
         "number": "10",
-        "summary": "Geometric shapes are often defined by rigid distances and angles, but few families of curves possess the elegance and universal utility of Conic Sections. Derived from the intersection of a plane and a double-napped cone, these four distinct curves—the circle, ellipse, parabola, and hyperbola—serve as the architectural blueprints of the universe. In this chapter, we will explore the dual nature of conics, examining them both as geometric loci defined by focal points and directrices, and as algebraic solutions to quadratic equations in two variables. From the elliptical orbits of planets governing our solar system to the parabolic curves used in satellite dishes and suspension bridges, mastering conics reveals the profound mathematical harmony connecting abstract algebra with the physical laws of nature.",
+        "summary": "Geometric shapes are often defined by rigid distances and angles, but few families of curves possess the elegance and universal utility of Conic Sections. Derived from the intersection of a plane and a double-napped cone, these four distinct curves\u2014the circle, ellipse, parabola, and hyperbola\u2014serve as the architectural blueprints of the universe. In this chapter, we will explore the dual nature of conics, examining them both as geometric loci defined by focal points and directrices, and as algebraic solutions to quadratic equations in two variables. From the elliptical orbits of planets governing our solar system to the parabolic curves used in satellite dishes and suspension bridges, mastering conics reveals the profound mathematical harmony connecting abstract algebra with the physical laws of nature.",
         "pages": [
             {
                 "id": "0",
@@ -123,7 +123,7 @@
     {
         "title": "Probabilities & Statistics",
         "number": "14",
-        "summary": "In our exploration of mathematical models thus far, we have primarily dealt with deterministic systems—where a given input inevitably yields a specific, calculated output. However, the world we inhabit is rarely so predictable; it is governed by uncertainty, variability, and chance. This chapter transitions us from the absolute certainty of algebraic functions to the stochastic nature of Probability and Statistics. Here, we will develop the analytical tools necessary to quantify uncertainty, calculate the likelihood of future events, and interpret complex datasets to uncover hidden patterns. By mastering concepts such as combinatorics, probability distributions, and statistical analysis, we bridge the gap between theoretical mathematics and practical application, empowering us to make data-driven decisions in fields ranging from quantum mechanics and engineering to economics and social policy.",
+        "summary": "In our exploration of mathematical models thus far, we have primarily dealt with deterministic systems\u2014where a given input inevitably yields a specific, calculated output. However, the world we inhabit is rarely so predictable; it is governed by uncertainty, variability, and chance. This chapter transitions us from the absolute certainty of algebraic functions to the stochastic nature of Probability and Statistics. Here, we will develop the analytical tools necessary to quantify uncertainty, calculate the likelihood of future events, and interpret complex datasets to uncover hidden patterns. By mastering concepts such as combinatorics, probability distributions, and statistical analysis, we bridge the gap between theoretical mathematics and practical application, empowering us to make data-driven decisions in fields ranging from quantum mechanics and engineering to economics and social policy.",
         "pages": [
             {
                 "id": "0",

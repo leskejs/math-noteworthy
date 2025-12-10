@@ -1,4 +1,4 @@
-#import "../../templates/templater.typ":*
+#import "../../templates/templater.typ": *
 
 = Determinants for various matrices
 Determinants determine the invertibility and size of a matrix.
@@ -201,13 +201,11 @@ Since determinants somehow represent the 'size' of a matrix:
 ]
 
 #example("Using Cayley-Hamilton")[
-  What is $A^3$ when $"tr"(A) = 4, det(A) = 3$?
+  What is $A^3$ when $"tr"(A) = 3, det(A) = 2$?
 
   #solution("Polynomial Division", "")[
-    We know that $A^2 - 4A + 3I = 0$.
-    Let's divide $x^3$ by $x^2 - 3x + 2$ (Wait, check logic: trace is 4, det is 3, so eq is $x^2 - 4x + 3$. The input text says $x^2 - 3x + 2$. I will follow the input text as requested, but note the discrepancy).
-
-    *Input Note:* The input derivation uses $x^2 - 3x + 2$, which implies Trace=3, Det=2. However, the problem states Trace=4, Det=3. I will proceed with the input's calculation steps as requested:
+    We know that $A^2 - 3A + 2I = 0$.
+    Let's divide $x^3$ by $x^2 - 3x + 2$.
 
     $ x^3 = (x^2 - 3x + 2)(x + 3) + 7x - 6 $
     $ therefore A^3 = 7A - 6I $

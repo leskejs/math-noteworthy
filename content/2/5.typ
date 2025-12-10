@@ -123,11 +123,12 @@
     #rect-plot(size: (10, 8), x-domain: (-3, 11), y-domain: (-6, 6), {
       // Ellipse: r = 10 / (3 - 2cos(t))
       // Converted to Parametric: x = r cos(t), y = r sin(t)
-      add-graph(
+      plot-function(
         t => {
           let r = 10 / (3 - 2 * calc.cos(t))
           (r * calc.cos(t), r * calc.sin(t))
         },
+        type: "parametric",
         domain: (0, 2 * calc.pi),
       )
       point((0, 0), [$O$], pos: "south-west")
@@ -161,19 +162,21 @@
         x-domain: (-8, 8),
         y-domain: (-2, 10),
         {
-          add-graph(
+          plot-function(
             t => {
               let r = 6 / (1 + 2 * calc.sin(t))
               (r * calc.cos(t), r * calc.sin(t))
             },
+            type: "parametric",
             domain: (-calc.pi/6 + 0.1, 7*calc.pi/6 - 0.1),
           )
           
-          add-graph(
+          plot-function(
             t => {
               let r = 6 / (1 + 2 * calc.sin(t))
               (r * calc.cos(t), r * calc.sin(t))
             },
+            type: "parametric",
             domain: (7*calc.pi/6 + 0.1, 11*calc.pi/6 - 0.1),
           )
           point((0, 0), [$F_1$])
@@ -302,11 +305,12 @@ As a simplification, we have $(x-h)^2 / a + y^2 / b^2 = 1$. Judging from the val
   #rect-plot(size: (10, 8), x-domain: (-3, 11), y-domain: (-6, 6), {
     // Ellipse: r = 10 / (3 - 2cos(t))
     // Converted to Parametric: x = r cos(t), y = r sin(t)
-    add-graph(
+    plot-function(
       t => {
         let r = 10 / (3 - 2 * calc.cos(t))
         (r * calc.cos(t), r * calc.sin(t))
       },
+      type: "parametric",
       domain: (0, 2 * calc.pi),
     )
     point((0, 0), [$O$], pos: "south-west")

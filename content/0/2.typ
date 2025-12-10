@@ -73,7 +73,7 @@ The number $r$ is the modulus of $z$, and $theta$ is called an *argument* (tr. í
 #example("Properties of the Modulus")[
   Verify the property for the complex numbers $omega$ and $z$.
   (a) $|overline(z)| = |z|$ #h(1em) (b) $z overline(z) = |z|^2$ #h(1em) (c) $|omega z| = |omega||z|$
-  (d) $|1/z| = 1/|z| (z != 0)$ #h(1em) (e) $|omega/z| = |omega|/|z| (z != 0)$
+  (d) $|1/z| = 1/(|z|) (z != 0)$ #h(1em) (e) $|omega/z| = (|omega|)/(|z|) (z != 0)$
 
   #solution("")[
     (c) Let $omega = a + b i$ and $z = c + d i$. Then
@@ -267,8 +267,9 @@ $ z_k = r^(1/n) e^(i(theta + 2k pi)/n), quad k = 0, 1, ..., n-1. $
       radius: 3,
       {
         // Circle of radius 2
-        add-graph(
+        plot-function(
           t => (2 * calc.cos(t), 2 * calc.sin(t)),
+          type: "parametric",
           domain: (0, 2 * calc.pi),
           style: (stroke: (dash: "dashed", paint: gray)),
         )

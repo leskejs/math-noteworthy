@@ -5,11 +5,11 @@
         "Lee Sihoo",
         "Lee Hojun"
     ],
-    "affiliation": "Korea Science Academy of KAIST",
-    "logo": "/content/images/cover-logo.png",
+    "affiliation": "Korea Science Acadmey of KAIST",
+    "logo": "../../content/images/cover-logo.png",
     "show-solution": true,
-    "solutions-text": "Solutions ver.",
-    "problems-text": "Problems ver.",
+    "solutions-text": "Solutions",
+    "problems-text": "Problems",
     "chapter-name": "Chapter",
     "subchap-name": "Section",
     "font": "IBM Plex Serif",
@@ -22,6 +22,6 @@
     "render-sample-count": 5000,
     "render-implicit-count": 100,
     "display-mode": "rose-pine",
-    "pad-chapter-id": false,
-    "pad-page-id": false
+    "pad-chapter-id": true,
+    "pad-page-id": true
 }

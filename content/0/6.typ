@@ -153,14 +153,14 @@ $ n dot (x - p) = 0 arrow.r.double a(x - x_0) + b(y - y_0) + c(z - z_0) = 0. $
     $ (x - 2)/(-2) = (y - 0)/3 arrow.r.double 3x - 6 = -2y arrow.r.double 3x + 2y - 6 = 0. $
 
     The distance from $A(0, 0, 0)$ to the line $3x + 2y - 6 = 0$ (in 2D) is:
-    $ d = |3(0) + 2(0) - 6| / sqrt(3^2 + 2^2) = |-6| / sqrt(9 + 4) = 6 / sqrt(13). $
+    $ d = abs(3(0) + 2(0) - 6) / sqrt(3^2 + 2^2) = abs(-6) / sqrt(9 + 4) = 6 / sqrt(13). $
 
     Alternatively, using the cross product area formula for triangle $A B D$:
-    Area of $triangle A B D = 1/2 |vec(A B) times vec(A D)|$.
+    Area of $triangle A B D = 1/2 norm(vec(A B) times vec(A D))$.
     $vec(A B) = #sym.chevron.l 2, 0, 0 #sym.chevron.r$, $vec(A D) = #sym.chevron.l 0, 3, 0 #sym.chevron.r$.
     $vec(A B) times vec(A D) = #sym.chevron.l 0, 0, 6 #sym.chevron.r$.
     Area $= 1/2 (6) = 3$.
-    Base $B D = |vec(B D)| = sqrt((-2)^2 + 3^2) = sqrt(13)$.
+    Base $B D = norm(vec(B D)) = sqrt((-2)^2 + 3^2) = sqrt(13)$.
     Height $h = (2 times "Area") / "Base" = 6 / sqrt(13)$.
   ]
 ]
@@ -175,7 +175,7 @@ Area of projected $S'$ is Area of $S$ times $cos theta$.
   Find the area of the face $A B C$.
 
   #solution("")[
-    The area of triangle $A B C$ is given by $1/2 |vec(A B) times vec(A C)|$.
+    The area of triangle $A B C$ is given by $1/2 norm(vec(A B) times vec(A C))$.
     $ vec(A B) = B - A = #sym.chevron.l -3, 3, 0 #sym.chevron.r $
     $ vec(A C) = C - A = #sym.chevron.l -3, 0, 3 #sym.chevron.r $
 
@@ -187,7 +187,7 @@ Area of projected $S'$ is Area of $S$ times $cos theta$.
     $
 
     The magnitude is:
-    $ |vec(A B) times vec(A C)| = sqrt(9^2 + 9^2 + 9^2) = sqrt(3 dot 81) = 9sqrt(3). $
+    $ norm(vec(A B) times vec(A C)) = sqrt(9^2 + 9^2 + 9^2) = sqrt(3 dot 81) = 9sqrt(3). $
 
     Therefore, the area is:
     $ "Area" = 1/2 (9sqrt(3)) = (9sqrt(3))/2. $
@@ -196,25 +196,25 @@ Area of projected $S'$ is Area of $S$ times $cos theta$.
 
 = Distance Formulas
 
-- Point to Plane: $d = |a x_0 + b y_0 + c z_0 - d| / sqrt(a^2 + b^2 + c^2)$.
-- Point to Line: $d = ||vec(A P) times v|| / ||v||$ (or using projection).
-- Skew Lines: $d = |(p_1 - p_2) dot (m_1 times m_2)| / ||m_1 times m_2||$.
+- Point to Plane: $d = abs(a x_0 + b y_0 + c z_0 - d) / sqrt(a^2 + b^2 + c^2)$.
+- Point to Line: $d = norm(vec(A P) times v) / norm(v)$ (or using projection).
+- Skew Lines: $d = abs((p_1 - p_2) dot (m_1 times m_2)) / norm(m_1 times m_2)$.
 
 #example("Distance Point-Plane")[
   Find the distance between the point $P(1, 2, 3)$ and the plane $x - 2y + 3z = 1$.
 
   #solution("")[
     The distance $D$ from a point $P_0(x_0, y_0, z_0)$ to the plane $a x + b y + c z + d = 0$ is given by:
-    $ D = |a x_0 + b y_0 + c z_0 + d| / sqrt(a^2 + b^2 + c^2). $
+    $ D = abs(a x_0 + b y_0 + c z_0 + d) / sqrt(a^2 + b^2 + c^2). $
 
     Rewrite the plane equation as $x - 2y + 3z - 1 = 0$.
     Here, $a = 1, b = -2, c = 3, d = -1$.
     $x_0 = 1, y_0 = 2, z_0 = 3$.
 
     $
-      D & = |1(1) + (-2)(2) + 3(3) - 1| / sqrt(1^2 + (-2)^2 + 3^2) \
-        & = |1 - 4 + 9 - 1| / sqrt(1 + 4 + 9) \
-        & = |5| / sqrt(14) = 5/sqrt(14).
+      D & = abs(1(1) + (-2)(2) + 3(3) - 1) / sqrt(1^2 + (-2)^2 + 3^2) \
+        & = abs(1 - 4 + 9 - 1) / sqrt(1 + 4 + 9) \
+        & = abs(5) / sqrt(14) = 5/sqrt(14).
     $
   ]
 ]
@@ -230,7 +230,7 @@ Area of projected $S'$ is Area of $S$ times $cos theta$.
     Line $l_2$: Point $P_2(0, 1, 0)$, Direction $v_2 = #sym.chevron.l 0, 1, 1 #sym.chevron.r$.
 
     The distance $d$ between skew lines is given by the projection of the vector connecting the points onto the normal vector of the parallel planes containing the lines.
-    $ d = |vec(P_1 P_2) dot (v_1 times v_2)| / |v_1 times v_2|. $
+    $ d = abs(vec(P_1 P_2) dot (v_1 times v_2)) / norm(v_1 times v_2). $
 
     1. Calculate $vec(P_1 P_2) = P_2 - P_1 = #sym.chevron.l -1, 1, 0 #sym.chevron.r$.
     2. Calculate cross product $n = v_1 times v_2$:
@@ -238,9 +238,9 @@ Area of projected $S'$ is Area of $S$ times $cos theta$.
     3. Calculate dot product:
       $ vec(P_1 P_2) dot n = (-1)(1) + (1)(-1) + (0)(1) = -1 - 1 = -2. $
     4. Calculate magnitude of normal:
-      $ |n| = sqrt(1^2 + (-1)^2 + 1^2) = sqrt(3). $
+      $ norm(n) = sqrt(1^2 + (-1)^2 + 1^2) = sqrt(3). $
 
     Distance:
-    $ d = |-2| / sqrt(3) = 2/sqrt(3) = (2sqrt(3))/3. $
+    $ d = abs(-2) / sqrt(3) = 2/sqrt(3) = (2sqrt(3))/3. $
   ]
 ]

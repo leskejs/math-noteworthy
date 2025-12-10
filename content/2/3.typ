@@ -17,8 +17,9 @@ Just as we shift functions $y=f(x)$ by $x arrow.r x-h$ and $y arrow.r y-k$, we c
 
     #rect-plot(size: (6, 7), x-domain: (-4, 2), y-domain: (-2, 6), {
       // Shifted Ellipse: x = -1 + 2cos(t), y = 2 + 3sin(t)
-      add-graph(
+      plot-function(
         t => (-1 + 2 * calc.cos(t), 2 + 3 * calc.sin(t)),
+        type: "parametric",
         domain: (0, 2 * calc.pi),
       )
       point((-1, 2), [$C$], pos: "east")
@@ -59,12 +60,12 @@ Just as we shift functions $y=f(x)$ by $x arrow.r x-h$ and $y arrow.r y-k$, we c
 
     #rect-plot(size: (8, 6), x-domain: (-4, 8), y-domain: (0, 8), {
       // Parabola: y = (x-2)^2/8 + 3
-      add-graph(
+      plot-function(
         x => (x - 2) * (x - 2) / 8 + 3,
         domain: (-4, 8),
       )
       // Axis of symmetry
-      add-graph(
+      plot-function(
         ((2, 0), (2, 8)),
         style: (stroke: (paint: gray, dash: "dashed")),
       )
@@ -97,18 +98,20 @@ Just as we shift functions $y=f(x)$ by $x arrow.r x-h$ and $y arrow.r y-k$, we c
     #rect-plot(size: (10, 6), x-domain: (-2, 10), y-domain: (-6, 4), {
       // Hyperbola centered at (4, -1)
       // Right Branch
-      add-graph(
+      plot-function(
         t => (4 + 4 * calc.cosh(t), -1 + 3 * calc.sinh(t)),
+        type: "parametric",
         domain: (-1.3, 1.3),
       )
       // Left Branch
-      add-graph(
+      plot-function(
         t => (4 - 4 * calc.cosh(t), -1 + 3 * calc.sinh(t)),
+        type: "parametric",
         domain: (-1.3, 1.3),
       )
       // Asymptotes: y+1 = +/- 3/4 (x-4)
-      add-graph(x => 0.75 * (x - 4) - 1, domain: (-2, 10), style: (stroke: (dash: "dotted")))
-      add-graph(x => -0.75 * (x - 4) - 1, domain: (-2, 10), style: (stroke: (dash: "dotted")))
+      plot-function(x => 0.75 * (x - 4) - 1, domain: (-2, 10), style: (stroke: (dash: "dotted")))
+      plot-function(x => -0.75 * (x - 4) - 1, domain: (-2, 10), style: (stroke: (dash: "dotted")))
 
       point((4, -1), [$C$])
       point((8, -1), [$V_2$], pos: "north-west")
@@ -145,9 +148,9 @@ Just as we shift functions $y=f(x)$ by $x arrow.r x-h$ and $y arrow.r y-k$, we c
 
     #rect-plot(size: (4, 8), x-domain: (-4, 2), y-domain: (-4, 8), {
       // Line 1: y = 3x + 6
-      add-graph(x => 3 * x + 6, domain: (-4, 2))
+      plot-function(x => 3 * x + 6, domain: (-4, 2))
       // Line 2: y = -3x
-      add-graph(x => -3 * x, domain: (-4, 2))
+      plot-function(x => -3 * x, domain: (-4, 2))
       point((-1, 3), [$P(-1,3)$], pos: "east", padding: 0.6)
     })
   ]

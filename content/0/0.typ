@@ -15,18 +15,17 @@
     draw.line((0, 0), (2, 2 * calc.sqrt(3)), name: "r")
     draw.line((2, 0), (2, 2 * calc.sqrt(3)), stroke: (dash: "dashed"), name: "x")
     draw.line((0, 2 * calc.sqrt(3)), (2, 2 * calc.sqrt(3)), stroke: (dash: "dashed"), name: "y")
-
     draw.content(("r.start", 50%, "r.end"), [r], anchor: "north-east", padding: 0.1)
     draw.content(
       "y.start",
-      text(fill: active-theme.plot.stroke, size: 7.5pt, [$2 sq(3)$]),
+      text(fill: active-theme.plot.stroke, size: 7.5pt, [$2 sqrt(3)$]),
       anchor: "east",
       padding: 0.05,
     )
   },
 )
 
-The cartesian coordinate of dot $P$ is $(2,2 sq(3))$. \
+The cartesian coordinate of dot $P$ is $(2,2 sqrt(3))$. \
 In polar coordinate system, the coordinate of dot $P$ is $(4,pi/3)$.
 
 #definition("Polar Coordinates")[

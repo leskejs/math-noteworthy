@@ -39,8 +39,9 @@ where $t in I$, are *parametric equations* (매개(변수)방정식) for the cur
       x-domain: (-1.5, 1.5),
       y-domain: (-1.5, 1.5),
       {
-        add-graph(
+        plot-function(
           t => (calc.cos(t), calc.sin(t)),
+          type: "parametric",
           domain: (0, 2 * calc.pi),
         )
         // Arrow to show direction
@@ -67,11 +68,11 @@ where $t in I$, are *parametric equations* (매개(변수)방정식) for the cur
       x-domain: (-2, 2),
       y-domain: (0, 3),
       {
-        add-graph(
+        plot-function(
           x => x * x + 1,
           domain: (-1, 1),
         )
-        add-graph(
+        plot-function(
           x => x * x + 1,
           domain: (-2, 2),
           style: (stroke: (dash: "dashed", paint: gray)),
@@ -113,8 +114,9 @@ where $t in I$, are *parametric equations* (매개(변수)방정식) for the cur
       x-domain: (-1.5, 1.5),
       y-domain: (-1.5, 1.5),
       {
-        add-graph(
+        plot-function(
           t => (calc.pow(calc.cos(t), 3), calc.pow(calc.sin(t), 3)),
+          type: "parametric",
           domain: (0, 2 * calc.pi),
         )
       },
@@ -147,8 +149,9 @@ As a circle rolls along a straight line, the curve traced out by a fixed point $
       x-domain: (0, 4 * calc.pi),
       y-domain: (0, 2.5),
       {
-        add-graph(
+        plot-function(
           t => (t - calc.sin(t), 1 - calc.cos(t)),
+          type: "parametric",
           domain: (0, 4 * calc.pi),
         )
       },
@@ -193,8 +196,9 @@ As a circle rolls along a straight line, the curve traced out by a fixed point $
       x-tick: 10,
       y-tick: 10,
       {
-        add-graph(
+        plot-function(
           t => (t * calc.cos(t), t * calc.sin(t)),
+          type: "parametric",
           domain: (1, 10 * calc.pi),
         )
       },

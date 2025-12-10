@@ -14,10 +14,10 @@
       size: (14, 14),
       radius: 5,
       {
-        add-graph(
+        plot-function(
           t => ((2 + 2 * calc.cos(t)) * calc.cos(t), (2 + 2 * calc.cos(t)) * calc.sin(t)),
+          type: "parametric",
           domain: (0, 2 * calc.pi),
-          samples: 2000,
         )
       },
     )
@@ -36,10 +36,10 @@
       radius: 1.5,
       tick: 0.25,
       {
-        add-graph(
+        plot-function(
           t => (calc.cos(2 * t) * calc.cos(t), calc.cos(2 * t) * calc.sin(t)),
+          type: "parametric",
           domain: (0, 2 * calc.pi),
-          samples: 2000,
         )
       },
     )
@@ -68,10 +68,10 @@
       size: (14, 14),
       radius: 4,
       {
-        add-graph(
+        plot-function(
           t => ((1 + 2 * calc.cos(t)) * calc.cos(t), (1 + 2 * calc.cos(t)) * calc.sin(t)),
+          type: "parametric",
           domain: (0, 2 * calc.pi),
-          samples: 2000,
         )
       },
     )
@@ -85,13 +85,13 @@
     radius: 1.5,
     tick: 0.25,
     {
-      add-graph(
+      plot-function(
         t => (
           calc.sqrt(calc.abs(calc.cos(2 * t))) * calc.cos(t),
           calc.sqrt(calc.abs(calc.cos(2 * t))) * calc.sin(t),
         ),
+        type: "parametric",
         domain: (0, 2 * calc.pi),
-        samples: 2000,
       )
     },
   )

@@ -13,23 +13,25 @@
   #rect-plot(size: (8, 6), x-domain: (-6, 6), y-domain: (-4, 4), {
     // General Hyperbola a=3, b=2
     // Right Branch
-    add-graph(
+    plot-function(
       t => (3 * calc.cosh(t), 2 * calc.sinh(t)),
+      type: "parametric",
       domain: (-1.5, 1.5),
     )
     // Left Branch
-    add-graph(
+    plot-function(
       t => (-3 * calc.cosh(t), 2 * calc.sinh(t)),
+      type: "parametric",
       domain: (-1.5, 1.5),
     )
 
     // Asymptotes y = +/- (b/a)x => +/- (2/3)x
-    add-graph(
+    plot-function(
       x => (2 / 3) * x,
       domain: (-5, 5),
       style: (stroke: (paint: rgb("#e0dcb8"), dash: "dashed")),
     )
-    add-graph(
+    plot-function(
       x => -(2 / 3) * x,
       domain: (-5, 5),
       style: (stroke: (paint: rgb("#e0dcb8"), dash: "dashed")),
@@ -73,12 +75,14 @@ We have noted that ellipses are bounded, as the finished form of the equation fo
 
   #rect-plot(size: (8, 5), x-domain: (-6, 6), y-domain: (-4, 4), {
     // a=3, b=sqrt(7) approx 2.65
-    add-graph(
+    plot-function(
       t => (3 * calc.cosh(t), 2.65 * calc.sinh(t)),
+      type: "parametric",
       domain: (-1.5, 1.5),
     )
-    add-graph(
+    plot-function(
       t => (-3 * calc.cosh(t), 2.65 * calc.sinh(t)),
+      type: "parametric",
       domain: (-1.5, 1.5),
     )
 
@@ -102,18 +106,20 @@ We have noted that ellipses are bounded, as the finished form of the equation fo
   #rect-plot(size: (6, 6), x-domain: (-4, 4), y-domain: (-5, 5), {
     // Vertical: a=2, b=1
     // x = b sinh(t), y = a cosh(t)
-    add-graph(
+    plot-function(
       t => (1 * calc.sinh(t), 2 * calc.cosh(t)),
+      type: "parametric",
       domain: (-1.8, 1.8),
     )
-    add-graph(
+    plot-function(
       t => (1 * calc.sinh(t), -2 * calc.cosh(t)),
+      type: "parametric",
       domain: (-1.8, 1.8),
     )
 
     // Asymptotes y = +/- 2x
-    add-graph(x => 2 * x, domain: (-2.5, 2.5), style: (stroke: (dash: "dashed")))
-    add-graph(x => -2 * x, domain: (-2.5, 2.5), style: (stroke: (dash: "dashed")))
+    plot-function(x => 2 * x, domain: (-2.5, 2.5), style: (stroke: (dash: "dashed")))
+    plot-function(x => -2 * x, domain: (-2.5, 2.5), style: (stroke: (dash: "dashed")))
 
     point((0, 2), [$V$], pos: "east")
     point((0, -2), [$V'$], pos: "east")

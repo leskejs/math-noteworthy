@@ -39,8 +39,9 @@
   For the ellipse $x^2 / 9 + y^2 / 4 = 1$, we can draw it as :
   #rect-plot(size: (8, 6), x-domain: (-4, 4), y-domain: (-3, 3), {
     // Parametric Ellipse: x = 3cos(t), y = 2sin(t)
-    add-graph(
+    plot-function(
       t => (3 * calc.cos(t), 2 * calc.sin(t)),
+      type: "parametric",
       domain: (0, 2 * calc.pi),
     )
     // Foci at +/- sqrt(5) approx 2.236
@@ -66,8 +67,9 @@
 
   #rect-plot(size: (8, 6), x-domain: (-5, 5), y-domain: (-4, 4), {
     // a=4, c=2 -> b = sqrt(16-4) = sqrt(12) approx 3.464
-    add-graph(
+    plot-function(
       t => (4 * calc.cos(t), 3.464 * calc.sin(t)),
+      type: "parametric",
       domain: (0, 2 * calc.pi),
     )
     point((2, 0), [$F_1$], pos: "south")
@@ -101,8 +103,9 @@ The quantity showing how the ellipse is similar to the circle.
   #rect-plot(size: (6, 8), x-domain: (-7, 7), y-domain: (-11, 11), x-tick: 2, y-tick: 2, {
     // Vertical Ellipse: c=8, a=10 -> b=6
     // x = 6cos(t), y = 10sin(t)
-    add-graph(
+    plot-function(
       t => (6 * calc.cos(t), 10 * calc.sin(t)),
+      type: "parametric",
       domain: (0, 2 * calc.pi),
     )
     point((0, 8), [$F_1$], pos: "west")
@@ -122,8 +125,9 @@ The quantity showing how the ellipse is similar to the circle.
 
 #rect-plot(size: (9, 6), x-domain: (-4, 4), y-domain: (-3, 3), {
   // Ellipse a=3, b=2
-  add-graph(
+  plot-function(
     t => (3 * calc.cos(t), 2 * calc.sin(t)),
+    type: "parametric",
     domain: (0, 2 * calc.pi),
   )
 
@@ -140,6 +144,6 @@ The quantity showing how the ellipse is similar to the circle.
 
   // Beam lines
   // FIX: Use standard list format for lines to avoid function errors
-  add-graph(((c, 0), (px, py)), style: (stroke: (paint: red, dash: "dashed"), mark: (end: ">")))
-  add-graph(((px, py), (-c, 0)), style: (stroke: (paint: red, dash: "dashed"), mark: (end: ">")))
+  plot-function(((c, 0), (px, py)), style: (stroke: (paint: red, dash: "dashed"), mark: (end: ">")))
+  plot-function(((px, py), (-c, 0)), style: (stroke: (paint: red, dash: "dashed"), mark: (end: ">")))
 })
